@@ -1,10 +1,8 @@
-def fizzbuzz(n)
-  (1..n).map do |i|
-    if (i % 3).zero? && (i % 5).zero? then 'FizzBuzz'
-    elsif (i % 3).zero? then               'Fizz'
-    elsif (i % 5).zero? then               'Buzz'
-    else                                   i
-    end
-  end
-end
-puts fizzbuzz(10)
+var fizzify = fizzbuzz = function(n)
+{
+  return Array.apply(null, new Array(n)).map(function(e, i){
+    return (++i % 3 ? '' : 'Fizz' ) + (i % 5 ? '' : 'Buzz') || i;
+  }); 
+}
+
+alert (fizzbuzz(10));
